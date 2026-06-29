@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "The terms governing your use of AI Workspace.",
+  description: "The terms governing your use of NovaAI.",
 };
 
 export default function TermsPage() {
@@ -14,13 +14,13 @@ export default function TermsPage() {
       <div className="prose prose-sm mt-8 max-w-none dark:prose-invert">
         <h2>1. Acceptance of terms</h2>
         <p>
-          By creating an account or using AI Workspace, you agree to be bound by these Terms of Service. If you
+          By creating an account or using NovaAI, you agree to be bound by these Terms of Service. If you
           do not agree, do not use the service.
         </p>
 
         <h2>2. Description of service</h2>
         <p>
-          AI Workspace provides document management, AI-assisted writing, chat, and prompt library
+          NovaAI provides document management, AI-assisted writing, chat, and prompt library
           functionality. Features may be added, modified, or removed at our discretion.
         </p>
 
@@ -55,7 +55,7 @@ export default function TermsPage() {
 
         <h2>7. Intellectual property</h2>
         <p>
-          You retain ownership of content you create in AI Workspace. We claim no ownership over your documents
+          You retain ownership of content you create in NovaAI. We claim no ownership over your documents
           or prompts. You grant us a limited license to process your content solely to provide the service.
         </p>
 
@@ -73,7 +73,7 @@ export default function TermsPage() {
 
         <h2>10. Limitation of liability</h2>
         <p>
-          To the maximum extent permitted by law, AI Workspace shall not be liable for indirect, incidental, or
+          To the maximum extent permitted by law, NovaAI shall not be liable for indirect, incidental, or
           consequential damages arising from your use of the service.
         </p>
 

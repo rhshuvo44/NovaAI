@@ -16,7 +16,7 @@ export function Logo({ className, href = "/", showWordmark = true }: LogoProps) 
       </span>
       {showWordmark && (
         <span className="font-display text-lg font-semibold tracking-tight">
-          AI Workspace
+          NovaAI
         </span>
       )}
     </Link>

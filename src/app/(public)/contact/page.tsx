@@ -5,7 +5,7 @@ import { ContactForm } from "@/features/marketing/components/contact-form";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch with the AI Workspace team.",
+  description: "Get in touch with the NovaAI team.",
 };
 
 export default function ContactPage() {

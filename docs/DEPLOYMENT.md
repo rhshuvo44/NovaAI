@@ -15,7 +15,7 @@
    NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard
    NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
    NEXT_PUBLIC_SITE_URL=https://yourdomain.com
-   NEXT_PUBLIC_SITE_NAME=AI Workspace
+   NEXT_PUBLIC_SITE_NAME=NovaAI
    ```
 
 4. Deploy. Vercel auto-detects Next.js and runs `next build`.

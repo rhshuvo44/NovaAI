@@ -16,7 +16,7 @@ export default function AiToolsIndexPage() {
     <div className="space-y-6">
       <div>
         <h1 className="font-display text-2xl font-semibold">AI Tools</h1>
-        <p className="text-sm text-muted-foreground">Every AI capability in AI Workspace, in one place.</p>
+        <p className="text-sm text-muted-foreground">Every AI capability in NovaAI, in one place.</p>
       </div>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">

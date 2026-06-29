@@ -12,7 +12,7 @@ import { CtaSection } from "@/features/marketing/components/cta-section";
 import { getOrganizationJsonLd, getSoftwareApplicationJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "AI Workspace — Write, think, and ship with AI at the margin",
+  title: "NovaAI — Write, think, and ship with AI at the margin",
 };
 
 export default function HomePage() {

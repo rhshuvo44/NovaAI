@@ -6,7 +6,7 @@ export function getOrganizationJsonLd() {
     "@type": "Organization",
     name: env.siteName,
     url: env.siteUrl,
-    description: "AI Workspace is an AI-powered SaaS platform for document management, chat, and prompt collaboration.",
+    description: "NovaAI is an AI-powered SaaS platform for document management, chat, and prompt collaboration.",
   };
 }
 

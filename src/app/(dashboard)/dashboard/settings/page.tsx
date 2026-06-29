@@ -20,7 +20,7 @@ export default function SettingsPage() {
       <Card>
         <CardHeader>
           <CardTitle className="text-base">Appearance</CardTitle>
-          <CardDescription>Choose how AI Workspace looks on this device.</CardDescription>
+          <CardDescription>Choose how NovaAI looks on this device.</CardDescription>
         </CardHeader>
         <CardContent>
           <RadioGroup value={theme} onValueChange={setTheme} className="grid grid-cols-3 gap-3">
@@ -46,7 +46,7 @@ export default function SettingsPage() {
       <Card>
         <CardHeader>
           <CardTitle className="text-base">Notifications</CardTitle>
-          <CardDescription>Manage how you hear from AI Workspace.</CardDescription>
+          <CardDescription>Manage how you hear from NovaAI.</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           {[

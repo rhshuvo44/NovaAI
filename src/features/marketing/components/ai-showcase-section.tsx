@@ -17,7 +17,7 @@ export function AiShowcaseSection() {
               Ask, draft, and refine — without leaving your workspace
             </h2>
             <p className="mt-4 text-neutral-400">
-              AI Workspace chat understands your documents and prompt library. Ask it to summarize a report,
+              NovaAI chat understands your documents and prompt library. Ask it to summarize a report,
               draft a follow-up email, or brainstorm a structure for your next proposal.
             </p>
             <ul className="mt-6 space-y-3 text-sm">

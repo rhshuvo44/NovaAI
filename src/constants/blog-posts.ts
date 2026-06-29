@@ -23,9 +23,9 @@ export const BLOG_POSTS: BlogPost[] = [
     readingMinutes: 5,
     content: `Most AI writing tools are built around a single interaction: you ask, it generates, you accept or reject. That model works fine for short, disposable text. It breaks down for anything you actually care about.
 
-When we started building AI Workspace, we kept running into the same problem in our own work: AI-generated drafts read fine on the surface, but they didn't carry our judgment. They didn't know which client was sensitive about pricing language, or that a particular phrase had failed in a previous proposal.
+When we started building NovaAI, we kept running into the same problem in our own work: AI-generated drafts read fine on the surface, but they didn't carry our judgment. They didn't know which client was sensitive about pricing language, or that a particular phrase had failed in a previous proposal.
 
-So we inverted the model. Instead of "AI writes, you edit," AI Workspace treats AI as an annotator — something that comments in the margin, suggests a summary, flags an unclear sentence, but never silently overwrites your words.
+So we inverted the model. Instead of "AI writes, you edit," NovaAI treats AI as an annotator — something that comments in the margin, suggests a summary, flags an unclear sentence, but never silently overwrites your words.
 
 This shows up in small ways throughout the product: AI summaries sit next to your document, not inside it. Tag suggestions are proposals, not automatic labels. Chat responses are clearly distinguished from your own writing, visually and structurally.
 
@@ -52,7 +52,7 @@ We'd rather build tools that adapt to how people actually write than ask people 
   {
     slug: "the-case-for-private-by-default-documents",
     title: "The case for private-by-default documents",
-    excerpt: "Every document you create in AI Workspace starts private. Here's why we didn't make sharing the default.",
+    excerpt: "Every document you create in NovaAI starts private. Here's why we didn't make sharing the default.",
     author: "Priya Shah",
     authorRole: "Head of Trust & Safety",
     publishedAt: "2026-04-09",
@@ -60,7 +60,7 @@ We'd rather build tools that adapt to how people actually write than ask people 
     readingMinutes: 3,
     content: `A lot of workspace tools default to "shared with your team" because it drives adoption metrics. We think that's the wrong call for a tool that handles drafts, internal notes, and half-formed ideas.
 
-In AI Workspace, every new document is private until you explicitly mark it public. The same goes for prompts. This isn't just a checkbox — it shapes how the product behaves end to end. AI summarization, tagging, and chat all operate within that privacy boundary by default.
+In NovaAI, every new document is private until you explicitly mark it public. The same goes for prompts. This isn't just a checkbox — it shapes how the product behaves end to end. AI summarization, tagging, and chat all operate within that privacy boundary by default.
 
 The tradeoff is that "share this with my team" requires one extra click compared to competitors. We think that's a reasonable price for not accidentally exposing someone's rough draft before they're ready.`,
   },

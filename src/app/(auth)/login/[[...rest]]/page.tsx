@@ -5,7 +5,7 @@ import { DemoLoginButton } from "@/features/auth/components/demo-login-button";
 
 export const metadata: Metadata = {
   title: "Log in",
-  description: "Log in to your AI Workspace account.",
+  description: "Log in to your NovaAI account.",
 };
 
 export default function LoginPage() {

@@ -45,7 +45,7 @@ export function FeaturesSection() {
             Everything you need, nothing you don&apos;t
           </h2>
           <p className="mt-3 text-muted-foreground">
-            AI Workspace is built around a simple idea: AI should annotate your work, not replace your thinking.
+            NovaAI is built around a simple idea: AI should annotate your work, not replace your thinking.
           </p>
         </div>
 

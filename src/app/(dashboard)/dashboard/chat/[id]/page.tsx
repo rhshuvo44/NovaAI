@@ -42,7 +42,7 @@ export default function ChatConversationPage() {
             disabled={sendMessage.isPending}
           />
           <p className="mt-2 text-center text-xs text-muted-foreground">
-            AI Workspace can make mistakes. Verify important information.
+            NovaAI can make mistakes. Verify important information.
           </p>
         </div>
       </div>

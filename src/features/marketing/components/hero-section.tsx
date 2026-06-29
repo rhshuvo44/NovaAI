@@ -27,7 +27,7 @@ export function HeroSection() {
           </h1>
 
           <p className="mt-5 max-w-lg text-lg text-muted-foreground">
-            AI Workspace brings documents, prompts, and AI collaboration into one place. Draft, summarize, and
+            NovaAI brings documents, prompts, and AI collaboration into one place. Draft, summarize, and
             organize your work with an assistant that annotates — it never takes the pen out of your hand.
           </p>
 

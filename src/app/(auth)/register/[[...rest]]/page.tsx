@@ -4,7 +4,7 @@ import { clerkAppearance } from "@/lib/clerk-appearance";
 
 export const metadata: Metadata = {
   title: "Create your account",
-  description: "Create your AI Workspace account and start collaborating with AI today.",
+  description: "Create your NovaAI account and start collaborating with AI today.",
 };
 
 export default function RegisterPage() {

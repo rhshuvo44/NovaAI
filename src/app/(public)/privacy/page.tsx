@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "How AI Workspace collects, uses, and protects your data.",
+  description: "How NovaAI collects, uses, and protects your data.",
 };
 
 export default function PrivacyPage() {
@@ -14,8 +14,8 @@ export default function PrivacyPage() {
       <div className="prose prose-sm mt-8 max-w-none dark:prose-invert">
         <h2>1. Overview</h2>
         <p>
-          This Privacy Policy describes how AI Workspace (&ldquo;we&rdquo;, &ldquo;us&rdquo;) collects, uses, and
-          protects information when you use our service. By using AI Workspace, you agree to the practices
+          This Privacy Policy describes how NovaAI (&ldquo;we&rdquo;, &ldquo;us&rdquo;) collects, uses, and
+          protects information when you use our service. By using NovaAI, you agree to the practices
           described here.
         </p>
 

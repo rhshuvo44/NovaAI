@@ -2,7 +2,7 @@
 
 ## Concept
 
-AI Workspace is a tool for focused knowledge work done *with* an AI collaborator. The design language avoids the generic "AI startup" look (purple/blue gradients, glassy cards everywhere) in favor of something closer to a well-made writing instrument: calm, warm, precise.
+NovaAI is a tool for focused knowledge work done *with* an AI collaborator. The design language avoids the generic "AI startup" look (purple/blue gradients, glassy cards everywhere) in favor of something closer to a well-made writing instrument: calm, warm, precise.
 
 The core visual idea is the **annotation tick** -- a small vertical mark in the margin, echoing editorial markup. It appears wherever AI has added something (a summary, a suggestion, an AI chat response) so the product visually distinguishes "what you wrote" from "what the AI added," which is the actual product thesis.
 

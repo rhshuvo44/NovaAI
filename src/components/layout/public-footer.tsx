@@ -63,7 +63,7 @@ export function PublicFooter() {
         </div>
 
         <div className="mt-10 flex flex-col items-center justify-between gap-2 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row">
-          <p>© {new Date().getFullYear()} AI Workspace. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} NovaAI. All rights reserved.</p>
           <p>Built for people who think on the page.</p>
         </div>
       </div>

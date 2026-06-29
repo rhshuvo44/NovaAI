@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "AI Workspace is built by a small team that thinks AI should annotate your work, not replace it.",
+  description: "NovaAI is built by a small team that thinks AI should annotate your work, not replace it.",
 };
 
 const TEAM = [
@@ -16,11 +16,11 @@ const TEAM = [
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-16 lg:px-8">
-      <h1 className="font-display text-4xl font-semibold tracking-tight">About AI Workspace</h1>
+      <h1 className="font-display text-4xl font-semibold tracking-tight">About NovaAI</h1>
 
       <div className="mt-8 space-y-5 text-muted-foreground">
         <p>
-          We started AI Workspace because every AI writing tool we tried asked us to choose between two bad
+          We started NovaAI because every AI writing tool we tried asked us to choose between two bad
           options: let the AI write for you and lose your voice, or ignore AI entirely and lose the speed.
         </p>
         <p>
@@ -29,7 +29,7 @@ export default function AboutPage() {
           A prompt optimizer that improves your instructions instead of guessing at your intent.
         </p>
         <p>
-          AI Workspace is built by a small, distributed team. We use the product daily to write the same kind of
+          NovaAI is built by a small, distributed team. We use the product daily to write the same kind of
           documents, prompts, and follow-ups you do — which is the main reason it works the way it does.
         </p>
       </div>

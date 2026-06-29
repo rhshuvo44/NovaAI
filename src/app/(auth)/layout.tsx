@@ -10,7 +10,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
         </div>
         {children}
         <p className="mt-8 text-center text-xs text-muted-foreground">
-          By continuing, you agree to AI Workspace&apos;s{" "}
+          By continuing, you agree to NovaAI&apos;s{" "}
           <Link href="/terms" className="underline hover:text-foreground">
             Terms
           </Link>{" "}
@@ -29,7 +29,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
             &ldquo;The margin is where the thinking happens.&rdquo;
           </p>
           <p className="mt-4 text-sm text-neutral-400">
-            AI Workspace annotates your documents, drafts, and prompts without ever taking the pen out of your hand.
+            NovaAI annotates your documents, drafts, and prompts without ever taking the pen out of your hand.
           </p>
         </div>
       </div>

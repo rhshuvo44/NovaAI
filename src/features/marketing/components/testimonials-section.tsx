@@ -7,7 +7,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 const TESTIMONIALS = [
   {
     quote:
-      "We moved our entire content review process into AI Workspace. The summarizer alone saves our team a few hours a week.",
+      "We moved our entire content review process into NovaAI. The summarizer alone saves our team a few hours a week.",
     name: "Priya Nair",
     role: "Head of Content, Lumen Studio",
     initials: "PN",

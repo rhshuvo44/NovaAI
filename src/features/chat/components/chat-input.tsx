@@ -11,7 +11,7 @@ interface ChatInputProps {
   placeholder?: string;
 }
 
-export function ChatInput({ onSend, disabled, placeholder = "Message AI Workspace…" }: ChatInputProps) {
+export function ChatInput({ onSend, disabled, placeholder = "Message NovaAI…" }: ChatInputProps) {
   const [value, setValue] = React.useState("");
   const textareaRef = React.useRef<HTMLTextAreaElement>(null);
 

@@ -8,34 +8,34 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(env.siteUrl),
   title: {
-    default: "AI Workspace — Write, think, and ship with AI at the margin",
-    template: "%s · AI Workspace",
+    default: "NovaAI — Write, think, and ship with AI at the margin",
+    template: "%s · NovaAI",
   },
   description:
-    "AI Workspace is where documents, prompts, and AI collaboration live in one place. Draft, summarize, and organize your work with an AI that annotates, not replaces.",
+    "NovaAI is where documents, prompts, and AI collaboration live in one place. Draft, summarize, and organize your work with an AI that annotates, not replaces.",
   keywords: [
-    "AI workspace",
+    "NovaAI",
     "AI document editor",
     "AI chat",
     "AI summarizer",
     "prompt library",
     "knowledge management",
   ],
-  authors: [{ name: "AI Workspace" }],
-  creator: "AI Workspace",
+  authors: [{ name: "NovaAI" }],
+  creator: "NovaAI",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: env.siteUrl,
     siteName: env.siteName,
-    title: "AI Workspace — Write, think, and ship with AI at the margin",
+    title: "NovaAI — Write, think, and ship with AI at the margin",
     description:
       "Documents, prompts, and AI collaboration in one place. Draft, summarize, and organize your work with an AI that annotates, not replaces.",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "AI Workspace" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "NovaAI" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Workspace — Write, think, and ship with AI at the margin",
+    title: "NovaAI — Write, think, and ship with AI at the margin",
     description:
       "Documents, prompts, and AI collaboration in one place. Draft, summarize, and organize your work with an AI that annotates, not replaces.",
     images: ["/og-image.png"],

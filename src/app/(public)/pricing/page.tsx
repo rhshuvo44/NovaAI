@@ -9,7 +9,7 @@ import { FaqSection } from "@/features/marketing/components/faq-section";
 
 export const metadata: Metadata = {
   title: "Pricing",
-  description: "Simple, transparent pricing for AI Workspace. Start free, upgrade when you need more.",
+  description: "Simple, transparent pricing for NovaAI. Start free, upgrade when you need more.",
 };
 
 export default function PricingPage() {

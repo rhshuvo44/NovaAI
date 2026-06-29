@@ -14,7 +14,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     name: "Free",
     price: "$0",
     period: "forever",
-    description: "For individuals trying out AI Workspace.",
+    description: "For individuals trying out NovaAI.",
     features: [
       "100,000 AI tokens / month",
       "Unlimited documents",

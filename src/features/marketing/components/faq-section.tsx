@@ -4,10 +4,10 @@ const FAQS = [
   {
     question: "Do I need to provide my own AI API keys?",
     answer:
-      "No. AI Workspace handles the AI provider connection for you. We currently support OpenAI and Gemini behind the scenes, and switch between them transparently.",
+      "No. NovaAI handles the AI provider connection for you. We currently support OpenAI and Gemini behind the scenes, and switch between them transparently.",
   },
   {
-    question: "Can I use AI Workspace for sensitive or confidential documents?",
+    question: "Can I use NovaAI for sensitive or confidential documents?",
     answer:
       "Yes. Documents are private by default and only visible to you unless you explicitly mark them public. Role-based access control on Team plans restricts who can view or edit shared content.",
   },
