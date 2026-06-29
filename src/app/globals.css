@@ -1,0 +1,291 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+/* ==========================================================================
+   AI Workspace Design System
+   ------------------------------------------------------------------------
+   Palette: "Ink & Annotation" - a warm graphite/paper base with two signal
+   accents: amber for primary actions/brand, teal for AI-originated content.
+   The pairing exists so the product can visually distinguish "what you
+   wrote" from "what the AI added" at a glance, which is the core tension
+   of the product (a workspace where AI annotates your work).
+   ========================================================================== */
+
+:root {
+  /* ---- Ink (graphite) scale - dark mode base / light mode text ---- */
+  --ink-950: #14120f;
+  --ink-900: #1c1a16;
+  --ink-800: #28251f;
+  --ink-700: #3a352c;
+  --ink-600: #4f493d;
+
+  /* ---- Paper (warm neutral) scale - light mode base / dark mode text ---- */
+  --paper-50: #faf7f2;
+  --paper-100: #f3eee5;
+  --paper-200: #e7ded0;
+  --paper-300: #d6c9b4;
+
+  /* ---- Neutral (warm gray) - secondary text, borders, muted chrome ---- */
+  --neutral-50: #f7f5f2;
+  --neutral-100: #ece8e1;
+  --neutral-200: #d9d2c7;
+  --neutral-300: #bbb0a0;
+  --neutral-400: #998d7c;
+  --neutral-500: #8a8478;
+  --neutral-600: #6b6354;
+  --neutral-700: #514a3d;
+  --neutral-800: #38332a;
+  --neutral-900: #211d16;
+
+  /* ---- Amber (primary accent) - brand, primary actions, your content ---- */
+  --amber-50: #fdf6ea;
+  --amber-100: #faead0;
+  --amber-200: #f3d29e;
+  --amber-300: #ecb86b;
+  --amber-400: #e8a33d;
+  --amber-500: #d68f28;
+  --amber-600: #b3741e;
+  --amber-700: #8a591a;
+  --amber-800: #61401a;
+  --amber-900: #3d2914;
+
+  /* ---- Teal (AI accent) - AI-originated content, chat, generation ---- */
+  --teal-50: #eef8f6;
+  --teal-100: #d3ece7;
+  --teal-200: #a8d8cf;
+  --teal-300: #76c0b4;
+  --teal-400: #3fa7a0;
+  --teal-500: #2e8d87;
+  --teal-600: #25716d;
+  --teal-700: #1f5a58;
+  --teal-800: #1b4644;
+  --teal-900: #142e2d;
+
+  /* ---- Semantic ---- */
+  --success-500: #4d9a5d;
+  --warning-500: #d68f28;
+  --error-500: #c14f3f;
+
+  /* ---- Light mode surface mapping ---- */
+  --background: var(--paper-50);
+  --foreground: var(--ink-900);
+  --surface: #ffffff;
+  --surface-raised: #ffffff;
+  --surface-sunken: var(--paper-100);
+  --border: var(--neutral-200);
+  --border-strong: var(--neutral-300);
+  --muted: var(--neutral-100);
+  --muted-foreground: var(--neutral-600);
+
+  --primary: var(--amber-400);
+  --primary-foreground: var(--ink-950);
+  --primary-hover: var(--amber-500);
+
+  --accent: var(--teal-400);
+  --accent-foreground: #ffffff;
+  --accent-hover: var(--teal-500);
+
+  --ring: var(--amber-400);
+
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: var(--ink-950);
+  --foreground: var(--paper-100);
+  --surface: var(--ink-900);
+  --surface-raised: var(--ink-800);
+  --surface-sunken: var(--ink-950);
+  --border: var(--ink-700);
+  --border-strong: var(--ink-600);
+  --muted: var(--ink-800);
+  --muted-foreground: var(--neutral-400);
+
+  --primary: var(--amber-400);
+  --primary-foreground: var(--ink-950);
+  --primary-hover: var(--amber-300);
+
+  --accent: var(--teal-400);
+  --accent-foreground: var(--ink-950);
+  --accent-hover: var(--teal-300);
+
+  --ring: var(--amber-400);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-hover: var(--accent-hover);
+
+  --color-ring: var(--ring);
+
+  --color-success: var(--success-500);
+  --color-warning: var(--warning-500);
+  --color-error: var(--error-500);
+
+  --color-ink-50: var(--paper-50);
+  --color-ink-100: var(--paper-100);
+  --color-ink-200: var(--paper-200);
+  --color-ink-300: var(--paper-300);
+  --color-ink-600: var(--ink-600);
+  --color-ink-700: var(--ink-700);
+  --color-ink-800: var(--ink-800);
+  --color-ink-900: var(--ink-900);
+  --color-ink-950: var(--ink-950);
+
+  --color-neutral-50: var(--neutral-50);
+  --color-neutral-100: var(--neutral-100);
+  --color-neutral-200: var(--neutral-200);
+  --color-neutral-300: var(--neutral-300);
+  --color-neutral-400: var(--neutral-400);
+  --color-neutral-500: var(--neutral-500);
+  --color-neutral-600: var(--neutral-600);
+  --color-neutral-700: var(--neutral-700);
+  --color-neutral-800: var(--neutral-800);
+  --color-neutral-900: var(--neutral-900);
+
+  --color-amber-50: var(--amber-50);
+  --color-amber-100: var(--amber-100);
+  --color-amber-200: var(--amber-200);
+  --color-amber-300: var(--amber-300);
+  --color-amber-400: var(--amber-400);
+  --color-amber-500: var(--amber-500);
+  --color-amber-600: var(--amber-600);
+  --color-amber-700: var(--amber-700);
+  --color-amber-800: var(--amber-800);
+  --color-amber-900: var(--amber-900);
+
+  --color-teal-50: var(--teal-50);
+  --color-teal-100: var(--teal-100);
+  --color-teal-200: var(--teal-200);
+  --color-teal-300: var(--teal-300);
+  --color-teal-400: var(--teal-400);
+  --color-teal-500: var(--teal-500);
+  --color-teal-600: var(--teal-600);
+  --color-teal-700: var(--teal-700);
+  --color-teal-800: var(--teal-800);
+  --color-teal-900: var(--teal-900);
+
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
+
+  --radius-sm: calc(var(--radius) - 0.375rem);
+  --radius-md: calc(var(--radius) - 0.125rem);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 0.25rem);
+  --radius-2xl: calc(var(--radius) + 0.75rem);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    color-scheme: light dark;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    font-feature-settings: "cv11", "ss01";
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: var(--amber-200);
+    color: var(--ink-950);
+  }
+
+  .dark ::selection {
+    background: var(--amber-800);
+    color: var(--paper-50);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display), ui-serif, Georgia, serif;
+  }
+
+  .font-mono {
+    font-family: var(--font-mono), ui-monospace, monospace;
+  }
+
+  .glass-surface {
+    background: color-mix(in srgb, var(--surface) 72%, transparent);
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    border: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+  }
+
+  .annotation-tick {
+    position: relative;
+  }
+
+  .annotation-tick::before {
+    content: "";
+    position: absolute;
+    left: -0.875rem;
+    top: 0.25rem;
+    bottom: 0.25rem;
+    width: 2px;
+    border-radius: 1px;
+    background: var(--accent);
+    opacity: 0.6;
+  }
+}
