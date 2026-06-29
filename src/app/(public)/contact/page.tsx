@@ -21,9 +21,9 @@ export default function ContactPage() {
       <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">
         <div className="space-y-4 lg:col-span-1">
           {[
-            { icon: Mail, label: "Email", value: "hello@aiworkspace.dev" },
+            { icon: Mail, label: "Email", value: "hello@novaai.dev" },
             { icon: MessageCircle, label: "Support", value: "Available via Help Center" },
-            { icon: MapPin, label: "Location", value: "Remote-first, worldwide" },
+            { icon: MapPin, label: "Location", value: "Dhaka, Bangladesh" },
           ].map((item) => (
             <Card key={item.label}>
               <CardContent className="flex items-center gap-3 pt-6">

@@ -23,7 +23,7 @@ export default function BlogPage() {
       <div className="mt-12 space-y-4">
         {BLOG_POSTS.map((post) => (
           <Link key={post.slug} href={`/blog/${post.slug}`}>
-            <Card className="transition-shadow hover:shadow-md">
+            <Card className="transition-shadow hover:shadow-md mt-2">
               <CardContent className="space-y-2 pt-6">
                 <div className="flex items-center gap-2">
                   <Badge variant="accent">{post.category}</Badge>
