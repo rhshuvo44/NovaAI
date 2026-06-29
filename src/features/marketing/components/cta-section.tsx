@@ -6,7 +6,7 @@ export function CtaSection() {
   return (
     <section className="px-4 py-20 lg:px-8">
       <div className="mx-auto max-w-4xl rounded-3xl bg-ink-950 px-8 py-16 text-center text-paper-100">
-        <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
+        <h2 className="font-display text-3xl font-semibold text-white tracking-tight sm:text-4xl">
           Start writing with AI in the margin
         </h2>
         <p className="mx-auto mt-3 max-w-md text-neutral-400">

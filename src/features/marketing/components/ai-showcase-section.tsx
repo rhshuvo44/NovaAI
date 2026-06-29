@@ -13,14 +13,14 @@ export function AiShowcaseSection() {
               <Sparkles className="h-3 w-3" />
               AI Chat
             </span>
-            <h2 className="mt-5 font-display text-3xl font-semibold tracking-tight sm:text-4xl">
+            <h2 className="mt-5 font-display text-white text-3xl font-semibold tracking-tight sm:text-4xl">
               Ask, draft, and refine — without leaving your workspace
             </h2>
             <p className="mt-4 text-neutral-400">
               NovaAI chat understands your documents and prompt library. Ask it to summarize a report,
               draft a follow-up email, or brainstorm a structure for your next proposal.
             </p>
-            <ul className="mt-6 space-y-3 text-sm">
+            <ul className="mt-6 space-y-3 text-sm text-white">
               {[
                 "Markdown rendering with syntax-highlighted code",
                 "One-click copy for any AI response",
@@ -56,7 +56,7 @@ export function AiShowcaseSection() {
                   <Sparkles className="h-4 w-4" />
                 </div>
                 <div className="annotation-tick max-w-[85%] rounded-2xl border border-ink-700 bg-ink-800 px-4 py-2.5 text-sm">
-                  <ul className="space-y-1.5">
+                  <ul className="space-y-1.5 text-white">
                     <li>• 12-month term, auto-renews unless cancelled 30 days prior</li>
                     <li>• Payment due net-30, 1.5% late fee after grace period</li>
                     <li>• Either party may terminate for material breach with 14-day cure window</li>
