@@ -1,6 +1,6 @@
-# AI Workspace Frontend
+# NovaAI Frontend
 
-Enterprise-grade, production-ready frontend for **AI Workspace**, built with Next.js 15 (App Router), React 19, and TypeScript. Integrates with the AI Workspace backend API for documents, AI chat, prompts, RBAC-driven admin tooling, and more.
+Enterprise-grade, production-ready frontend for **NovaAI**, built with Next.js 15 (App Router), React 19, and TypeScript. Integrates with the NovaAI backend API for documents, AI chat, prompts, RBAC-driven admin tooling, and more.
 
 ## Tech Stack
 
@@ -64,7 +64,7 @@ In short:
 
 ## Backend Integration
 
-This frontend is built against the **AI Workspace backend's actual API contract**: the standardized `{ success, message, data, meta }` response envelope, its specific RBAC permission model, and its specific endpoint paths (`/api/v1/...`). The type definitions in `src/types/` and the service layer in `src/services/api/` mirror the backend's Mongoose models and Express routes directly -- they are not generic placeholders.
+This frontend is built against the **NovaAI backend's actual API contract**: the standardized `{ success, message, data, meta }` response envelope, its specific RBAC permission model, and its specific endpoint paths (`/api/v1/...`). The type definitions in `src/types/` and the service layer in `src/services/api/` mirror the backend's Mongoose models and Express routes directly -- they are not generic placeholders.
 
 Two integration details worth knowing:
 1. **Auth model**: the backend's `requireAuth` middleware verifies a **Clerk session token** directly (not a separate backend-issued token) on every request's `Authorization` header. The Axios client (`src/services/api/client.ts`) is wired to Clerk's `getToken()` via `useApiAuthSync()`, mounted once in `DashboardShell`.
