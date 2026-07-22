@@ -3,11 +3,11 @@
 import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useUser } from "@clerk/nextjs";
 import { Menu, X } from "lucide-react";
 import { Logo } from "@/components/shared/logo";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
+import { useAuthStore } from "@/store/use-auth-store";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
@@ -19,7 +19,7 @@ const NAV_LINKS = [
 
 export function PublicNavbar() {
   const pathname = usePathname();
-  const { isSignedIn } = useUser();
+  const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
 
@@ -58,7 +58,7 @@ export function PublicNavbar() {
 
         <div className="hidden items-center gap-2 lg:flex">
           <ThemeToggle />
-          {isSignedIn ? (
+          {isAuthenticated ? (
             <Button asChild>
               <Link href="/dashboard">Go to dashboard</Link>
             </Button>
@@ -98,7 +98,7 @@ export function PublicNavbar() {
             ))}
           </nav>
           <div className="mt-3 flex flex-col gap-2 border-t border-border pt-3">
-            {isSignedIn ? (
+            {isAuthenticated ? (
               <Button asChild>
                 <Link href="/dashboard">Go to dashboard</Link>
               </Button>

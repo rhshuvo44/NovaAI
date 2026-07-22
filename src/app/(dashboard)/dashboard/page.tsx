@@ -24,7 +24,7 @@ export default function DashboardOverviewPage() {
   if (isError) {
     return <ErrorState onRetry={() => refetch()} />;
   }
-
+// console.log({overview, analytics, recentDocs});
   return (
     <div className="space-y-8">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
@@ -58,13 +58,13 @@ export default function DashboardOverviewPage() {
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {isLoading || !overview ? (
-          Array.from({ length: 4 }).map((_, i) => <StatCardSkeleton key={i} />)
+          Array?.from({ length: 4 })?.map((_, i) => <StatCardSkeleton key={i} />)
         ) : (
           <>
-            <StatCard label="Documents" value={overview.documentCount} icon={FileText} accent="primary" />
-            <StatCard label="Active chats" value={overview.activeChatCount} icon={MessageSquare} accent="accent" />
-            <StatCard label="Saved prompts" value={overview.promptCount} icon={BookOpen} accent="primary" />
-            <StatCard label="Unread notifications" value={overview.unreadNotificationCount} icon={Bell} accent="accent" />
+            <StatCard label="Documents" value={overview?.documentCount} icon={FileText} accent="primary" />
+            <StatCard label="Active chats" value={overview?.activeChatCount} icon={MessageSquare} accent="accent" />
+            <StatCard label="Saved prompts" value={overview?.promptCount} icon={BookOpen} accent="primary" />
+            <StatCard label="Unread notifications" value={overview?.unreadNotificationCount} icon={Bell} accent="accent" />
           </>
         )}
       </div>
@@ -77,7 +77,7 @@ export default function DashboardOverviewPage() {
           </CardHeader>
           <CardContent>
             {analytics?.dailyTimeSeries.length ? (
-              <AreaChart data={analytics.dailyTimeSeries} xKey="date" yKey="count" />
+              <AreaChart data={analytics?.dailyTimeSeries} xKey="date" yKey="count" />
             ) : (
               <EmptyState title="No activity yet" description="Your activity chart will populate as you use the workspace." />
             )}
@@ -90,19 +90,19 @@ export default function DashboardOverviewPage() {
             <CardDescription>Your most recently updated work.</CardDescription>
           </CardHeader>
           <CardContent>
-            {recentDocs?.items.length ? (
+            {recentDocs?.items?.length ? (
               <ul className="space-y-3">
-                {recentDocs.items.map((doc) => (
-                  <li key={doc._id}>
+                {recentDocs?.items.map((doc) => (
+                  <li key={doc?._id}>
                     <Link
-                      href={`/dashboard/documents/${doc._id}`}
+                      href={`/dashboard/documents/${doc?._id}`}
                       className="flex items-center gap-3 rounded-lg p-2 -mx-2 transition-colors hover:bg-muted"
                     >
                       <FileText className="h-4 w-4 shrink-0 text-muted-foreground" />
                       <div className="min-w-0 flex-1">
-                        <p className="truncate text-sm font-medium">{doc.title}</p>
+                        <p className="truncate text-sm font-medium">{doc?.title}</p>
                         <p className="text-xs text-muted-foreground">
-                          {formatDistanceToNow(new Date(doc.updatedAt), { addSuffix: true })}
+                          {formatDistanceToNow(new Date(doc?.updatedAt), { addSuffix: true })}
                         </p>
                       </div>
                     </Link>

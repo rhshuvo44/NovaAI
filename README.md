@@ -70,6 +70,16 @@ Two integration details worth knowing:
 1. **Auth model**: the backend's `requireAuth` middleware verifies a **Clerk session token** directly (not a separate backend-issued token) on every request's `Authorization` header. The Axios client (`src/services/api/client.ts`) is wired to Clerk's `getToken()` via `useApiAuthSync()`, mounted once in `DashboardShell`.
 2. **A few admin pages present data honestly rather than fabricating it.** The backend has no dedicated "system logs" HTTP endpoint or per-feature AI-usage breakdown -- `/admin/logs` redirects to the real Audit Trail, and `/admin/ai-usage` / `/admin/reports` are built from the analytics and dashboard-overview endpoints that do exist, with UI copy that says so rather than inventing numbers.
 
+### Default seed accounts
+
+When running against a freshly seeded backend, the following accounts are available (passwords from the corresponding env vars in the backend `.env`):
+
+| Email | Role |
+|-------|------|
+| `admin@novaai.com` | Super Admin |
+| `manager@novaai.com` | Manager |
+| `user@novaai.com` | User |
+
 ## Testing the build
 
 ```bash

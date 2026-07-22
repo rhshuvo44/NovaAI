@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { SignUp } from "@clerk/nextjs";
-import { clerkAppearance } from "@/lib/clerk-appearance";
+import { RegisterForm } from "./register-form";
 
 export const metadata: Metadata = {
   title: "Create your account",
@@ -8,5 +7,9 @@ export const metadata: Metadata = {
 };
 
 export default function RegisterPage() {
-  return <SignUp appearance={clerkAppearance} path="/register" signInUrl="/login" />;
+  return (
+    <div className="flex w-full max-w-sm flex-col gap-4">
+      <RegisterForm />
+    </div>
+  );
 }

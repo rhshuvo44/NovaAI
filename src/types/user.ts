@@ -2,7 +2,6 @@ import type { Role } from "./rbac";
 
 export interface User {
   _id: string;
-  clerkId: string;
   email: string;
   firstName?: string;
   lastName?: string;

@@ -3,17 +3,10 @@ import { env } from "@/lib/env";
 import { ApiError } from "./api-error";
 import type { ApiErrorResponse } from "@/types/api";
 
-/**
- * A function that returns the current Clerk session token, or null if
- * unauthenticated. Wired up once at app startup via `setAuthTokenGetter`
- * (see `src/hooks/use-api-auth-sync.ts`), since the Axios instance is a
- * plain module-level singleton and can't call Clerk's `useAuth()` hook
- * directly.
- */
-let getAuthToken: (() => Promise<string | null>) | null = null;
+let getAccessToken: (() => string | null) | null = null;
 
-export function setAuthTokenGetter(fn: () => Promise<string | null>): void {
-  getAuthToken = fn;
+export function setAccessTokenGetter(fn: () => string | null): void {
+  getAccessToken = fn;
 }
 
 export const apiClient = axios.create({
@@ -25,8 +18,8 @@ export const apiClient = axios.create({
 });
 
 apiClient.interceptors.request.use(async (config: InternalAxiosRequestConfig) => {
-  if (getAuthToken) {
-    const token = await getAuthToken();
+  if (getAccessToken) {
+    const token = getAccessToken();
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }

@@ -25,7 +25,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
       <div className="relative hidden w-1/2 overflow-hidden bg-ink-950 lg:flex lg:items-center lg:justify-center">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(232,163,61,0.18),transparent_45%),radial-gradient(circle_at_80%_70%,rgba(63,167,160,0.18),transparent_45%)]" />
         <div className="relative z-10 max-w-md px-8 text-paper-100">
-          <p className="font-display text-3xl italic leading-snug">
+          <p className="font-display text-3xl italic leading-snug text-white">
             &ldquo;The margin is where the thinking happens.&rdquo;
           </p>
           <p className="mt-4 text-sm text-neutral-400">
