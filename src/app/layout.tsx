@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { fraunces, inter, jetbrainsMono } from "@/lib/fonts";
 import { AppProviders } from "@/providers/app-providers";
 import { env } from "@/lib/env";
+import { SkipNav } from "@/components/ui/skip-nav";
 import "highlight.js/styles/atom-one-dark.css";
 import "./globals.css";
 
@@ -70,6 +71,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
+        <SkipNav />
         <AppProviders>{children}</AppProviders>
       </body>
     </html>

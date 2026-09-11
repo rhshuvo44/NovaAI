@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { entrance } from "@/constants/motion";
 
 const STATS = [
   { value: "40K+", label: "Documents drafted" },
@@ -16,10 +17,11 @@ export function StatisticsSection() {
         {STATS.map((stat, index) => (
           <motion.div
             key={stat.label}
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            variants={entrance}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: index * 0.08 }}
+            custom={index * 0.08}
             className="text-center"
           >
             <p className="font-display text-3xl font-semibold tabular-nums lg:text-4xl">{stat.value}</p>

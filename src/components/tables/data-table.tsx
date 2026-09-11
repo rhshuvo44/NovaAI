@@ -163,11 +163,12 @@ export function DataTable<TData>({
                   </td>
                 </tr>
               ) : (
-                table.getRowModel().rows.map((row) => (
+                table.getRowModel().rows.map((row, i) => (
                   <tr
                     key={row.id}
                     className={cn(
-                      "border-b border-border transition-colors last:border-0 hover:bg-muted/50",
+                      "border-b border-border transition-colors last:border-0 hover:bg-muted/60",
+                      i % 2 === 1 && "bg-surface-sunken/30",
                       row.getIsSelected() && "bg-amber-50/60 dark:bg-amber-900/10"
                     )}
                   >

@@ -31,7 +31,7 @@ export function FaqSection() {
     <section className="px-4 py-20 lg:px-8">
       <div className="mx-auto max-w-3xl">
         <div className="text-center">
-          <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">Frequently asked questions</h2>
+          <h2 className="font-display text-heading-1 font-semibold tracking-tight">Frequently asked questions</h2>
         </div>
 
         <Accordion type="single" collapsible className="mt-10">

@@ -31,6 +31,21 @@ Every one of these is a single, reusable component used across every feature tha
 
 `Sidebar`, `MobileNav`, `Topbar`, `CommandPalette`, `NotificationBell`, `ProfileDropdown`, `ThemeToggle`, `DashboardShell` (combines all of the above for both `/dashboard` and `/admin`), `PublicNavbar`, `PublicFooter`.
 
+## Accessibility (`src/components/ui/`)
+
+`SkipNav` — renders a visually hidden "Skip to main content" link that appears on keyboard focus. Placed as the first child of `<body>` in the root layout. Targets `id="main-content"` on the `<main>` element.
+
+## Constants (`src/constants/`)
+
+| File | Contents |
+|------|----------|
+| `navigation.ts` | Nav section definitions for sidebar (user + admin) |
+| `query-keys.ts` | TanStack Query cache key constants |
+| `pricing.ts` | Pricing plan data for the marketing page |
+| `motion.ts` | Centralized Framer Motion variants (`entrance`, `scaleIn`, `slideInLeft`, `staggerContainer`, `floatAnimation`). All marketing page motion should reference these — no inline `initial`/`animate` definitions for standard entrances. |
+| `icons.ts` | Centralized icon exports from lucide-react for easy auditing |
+| `blog-posts.ts` | Blog post data for the marketing page |
+
 ## Feature Components (`src/features/*/components/`)
 
 Page-specific composition only -- e.g. `features/chat/components/message-bubble.tsx` knows about `Message` objects and the annotation-tick motif, but renders its content via the shared `MarkdownRenderer` and `CopyButton` rather than reimplementing markdown rendering or clipboard logic.

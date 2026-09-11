@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { entrance } from "@/constants/motion";
 
 const TESTIMONIALS = [
   {
@@ -32,17 +33,18 @@ export function TestimonialsSection() {
     <section className="px-4 py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">Loved by teams who write a lot</h2>
+          <h2 className="font-display text-heading-1 font-semibold tracking-tight">Loved by teams who write a lot</h2>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-3">
           {TESTIMONIALS.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.08 }}
+            variants={entrance}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={index * 0.08}
               className="rounded-2xl border border-border bg-surface-raised p-6"
             >
               <div className="flex gap-0.5 text-amber-400">

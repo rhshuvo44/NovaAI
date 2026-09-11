@@ -27,6 +27,23 @@ Three font families, each with a specific job, all self-hosted via `next/font/lo
 - **Inter** (`font-sans`, default) -- everything else: body copy, labels, buttons, navigation.
 - **JetBrains Mono** (`font-mono`) -- code blocks, AI-generated structured output, document content in the editor. Treated as a first-class face, not an afterthought, since the product renders AI/code output constantly.
 
+### Type scale
+
+Defined as CSS custom properties in `globals.css` for consistency across breakpoints:
+
+| Class | Variable | Size | Used for |
+|-------|----------|------|----------|
+| `.text-hero` | `--text-hero` | `clamp(2.25rem, 5vw, 3.75rem)` | Marketing hero H1 |
+| `.text-heading-1` | `--text-h1` | `clamp(1.875rem, 3.5vw, 2.5rem)` | Section H2, page titles |
+| `.text-heading-2` | `--text-h2` | `clamp(1.5rem, 2.5vw, 1.875rem)` | Subsection headings |
+| `.text-heading-3` | `--text-h3` | `clamp(1.25rem, 2vw, 1.5rem)` | Card headings |
+| `.text-heading-4` | `--text-h4` | `clamp(1.125rem, 1.5vw, 1.25rem)` | Minor headings |
+| `text-sm` | `--text-body-sm` | `0.875rem` | Body secondary, descriptions |
+| `text-xs` | `--text-caption` | `0.75rem` | Captions, metadata |
+| `.text-label` | `--text-label` | `0.6875rem` | Sidebar section headers, field labels (uppercase) |
+
+Use the utility class (e.g. `text-heading-1`) instead of manually stacking breakpoint classes like `text-3xl sm:text-4xl`. The `clamp()` values handle responsive sizing automatically.
+
 ## Spacing & Shape
 
 - 8px base spacing system (Tailwind's default scale already aligns with this).
@@ -39,8 +56,41 @@ Three font families, each with a specific job, all self-hosted via `next/font/lo
 
 ## Light & Dark Mode
 
-Implemented via `next-themes` (`attribute="class"`, `defaultTheme="system"`). Every color token has both a light and dark mapping in `globals.css`; components never need their own dark-mode-specific Tailwind classes except for the rare case of a literal accent color on a `Badge` variant (e.g. `dark:bg-amber-900/40`), which is intentional since those represent semantic states (success/warning/error) rather than the base theme.
+Implemented via `next-themes` (`attribute="class"`, `defaultTheme="system"`). Every color token has both a light and dark mapping in `globals.css`. Components always use semantic token classes (`bg-surface`, `text-foreground`, `border-border`) and never hardcode hex values. The theme system handles dark mode automatically — no `dark:` Tailwind variants needed in component code.
+
+Badge variants use `bg-<token>/15` with `text-<token>` for semantic consistency across both modes.
 
 ## Motion
 
-Framer Motion is used for entrance animations on marketing page sections (`whileInView`, fade + slight vertical offset) and for the homepage hero's floating "Summarized in 2s" chip. Motion respects `prefers-reduced-motion` globally via a CSS rule in `globals.css` that collapses all animation/transition durations to near-zero for users who request it.
+Framer Motion is used for entrance animations on marketing page sections (`whileInView`, fade + slight vertical offset) and for the homepage hero's floating "Summarized in 2s" chip. 
+
+### Variant library (`src/constants/motion.ts`)
+
+All motion variants are centralized in a single file for consistency:
+
+| Export | Type | Use case |
+|--------|------|----------|
+| `entrance` | Variants | Standard fade + 16px vertical offset (0.4s ease) |
+| `entranceSmall` | Variants | Subtle fade + 8px offset for small cards |
+| `fadeIn` | Variants | Pure opacity fade |
+| `scaleIn` | Variants | Fade + 0.96 scale for mockups/hero images |
+| `slideInLeft` | Variants | Fade + -12px X offset for side-panel entries |
+| `staggerContainer` | Variants | Parent variant that staggers children by 60ms |
+| `floatKeyframes` + `floatTransition` | object + object | Infinite gentle vertical float for hero badges (use with `animate={{ y: floatKeyframes.y }} transition={floatTransition}`) |
+
+Usage pattern:
+```tsx
+import { entrance } from "@/constants/motion";
+
+<motion.div
+  variants={entrance}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  custom={index * 0.06}
+>
+  ...
+</motion.div>
+```
+
+Motion respects `prefers-reduced-motion` globally via a CSS rule in `globals.css` that collapses all animation/transition durations to near-zero for users who request it.

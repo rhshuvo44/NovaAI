@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Sparkles, User } from "lucide-react";
+import { entrance } from "@/constants/motion";
 
 export function AiShowcaseSection() {
   return (
@@ -13,7 +14,7 @@ export function AiShowcaseSection() {
               <Sparkles className="h-3 w-3" />
               AI Chat
             </span>
-            <h2 className="mt-5 font-display text-white text-3xl font-semibold tracking-tight sm:text-4xl">
+            <h2 className="mt-5 font-display text-white text-heading-1 font-semibold tracking-tight">
               Ask, draft, and refine — without leaving your workspace
             </h2>
             <p className="mt-4 text-neutral-400">
@@ -35,10 +36,10 @@ export function AiShowcaseSection() {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            variants={entrance}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
             className="rounded-2xl border border-ink-700 bg-ink-900 p-5"
           >
             <div className="space-y-4">

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FilePlus, Sparkles, Share2 } from "lucide-react";
+import { entranceSmall } from "@/constants/motion";
 
 const STEPS = [
   {
@@ -26,7 +27,7 @@ export function HowItWorksSection() {
     <section className="px-4 py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">How it works</h2>
+          <h2 className="font-display text-heading-1 font-semibold tracking-tight">How it works</h2>
           <p className="mt-3 text-muted-foreground">Three steps from blank page to finished work.</p>
         </div>
 
@@ -34,10 +35,11 @@ export function HowItWorksSection() {
           {STEPS.map((step, index) => (
             <motion.div
               key={step.title}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
+            variants={entranceSmall}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={index * 0.1}
               className="relative"
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-400 font-display text-lg font-semibold text-ink-950">

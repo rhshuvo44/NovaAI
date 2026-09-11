@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import { entrance } from "@/constants/motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
@@ -13,7 +14,7 @@ export function PricingTeaserSection() {
     <section className="px-4 py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
+          <h2 className="font-display text-heading-1 font-semibold tracking-tight">
             Simple pricing, no surprises
           </h2>
           <p className="mt-3 text-muted-foreground">Start free. Upgrade only when you need more.</p>
@@ -23,10 +24,11 @@ export function PricingTeaserSection() {
           {PRICING_PLANS.map((plan, index) => (
             <motion.div
               key={plan.name}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.08 }}
+            variants={entrance}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={index * 0.08}
               className={cn(
                 "rounded-2xl border p-6",
                 plan.highlighted ? "border-amber-400 bg-amber-50/40 shadow-md dark:bg-amber-900/10" : "border-border bg-surface-raised"

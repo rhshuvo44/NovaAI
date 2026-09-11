@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FileText, MessageSquare, Sparkles, Tags, Wand2, Search } from "lucide-react";
+import { entrance } from "@/constants/motion";
 
 const FEATURES = [
   {
@@ -41,7 +42,7 @@ export function FeaturesSection() {
     <section className="px-4 py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
+          <h2 className="font-display text-heading-1 font-semibold tracking-tight">
             Everything you need, nothing you don&apos;t
           </h2>
           <p className="mt-3 text-muted-foreground">
@@ -53,10 +54,11 @@ export function FeaturesSection() {
           {FEATURES.map((feature, index) => (
             <motion.div
               key={feature.title}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              variants={entrance}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.06 }}
+              custom={index * 0.06}
               className="rounded-2xl border border-border bg-surface-raised p-6"
             >
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300">

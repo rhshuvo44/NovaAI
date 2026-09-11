@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FileText, Megaphone, Mail, ClipboardList } from "lucide-react";
+import { entranceSmall } from "@/constants/motion";
 
 const TEMPLATES = [
   { icon: Megaphone, title: "Product launch brief", category: "Marketing" },
@@ -15,7 +16,7 @@ export function TemplatesSection() {
     <section className="bg-surface-sunken px-4 py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
+          <h2 className="font-display text-heading-1 font-semibold tracking-tight">
             Start from a template
           </h2>
           <p className="mt-3 text-muted-foreground">Skip the blank page. Adapt a starting point built for your team.</p>
@@ -25,10 +26,11 @@ export function TemplatesSection() {
           {TEMPLATES.map((template, index) => (
             <motion.div
               key={template.title}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.06 }}
+            variants={entranceSmall}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={index * 0.06}
               className="cursor-pointer rounded-2xl border border-border bg-surface-raised p-5 transition-shadow hover:shadow-md"
             >
               <template.icon className="h-6 w-6 text-amber-500" />

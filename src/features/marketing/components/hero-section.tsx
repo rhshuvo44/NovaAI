@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { entrance, scaleIn, slideInLeft, floatKeyframes, floatTransition } from "@/constants/motion";
 
 export function HeroSection() {
   return (
@@ -11,17 +12,13 @@ export function HeroSection() {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_10%,rgba(232,163,61,0.10),transparent_45%),radial-gradient(circle_at_85%_30%,rgba(63,167,160,0.10),transparent_45%)]" />
 
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 lg:grid-cols-2">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
+        <motion.div variants={entrance} initial="hidden" animate="visible" custom={0}>
           <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-muted-foreground">
             <Sparkles className="h-3 w-3 text-accent" />
             Now with AI-powered prompt optimization
           </span>
 
-          <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
+          <h1 className="mt-5 font-display text-hero font-semibold tracking-tight">
             Write, think, and ship —{" "}
             <span className="italic text-amber-500">with AI at the margin.</span>
           </h1>
@@ -46,12 +43,7 @@ export function HeroSection() {
           <p className="mt-4 text-xs text-muted-foreground">No credit card required. Free plan included.</p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="relative"
-        >
+        <motion.div variants={scaleIn} initial="hidden" animate="visible" custom={0.1} className="relative">
           <div className="relative rounded-2xl border border-border bg-surface-raised p-6 shadow-2xl">
             <div className="flex items-center gap-2 border-b border-border pb-3">
               <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
@@ -68,9 +60,10 @@ export function HeroSection() {
               </p>
 
               <motion.div
-                initial={{ opacity: 0, x: -8 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
+                variants={slideInLeft}
+                initial="hidden"
+                animate="visible"
+                custom={0.6}
                 className="annotation-tick rounded-lg bg-teal-50 p-3 text-xs text-teal-800 dark:bg-teal-900/20 dark:text-teal-300"
               >
                 <span className="mb-1 flex items-center gap-1 font-semibold">
@@ -87,8 +80,8 @@ export function HeroSection() {
           </div>
 
           <motion.div
-            animate={{ y: [0, -8, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            animate={{ y: floatKeyframes.y }}
+            transition={floatTransition}
             className="absolute -right-4 -top-4 flex items-center gap-2 rounded-xl border border-border bg-surface-raised px-3 py-2 shadow-lg"
           >
             <Sparkles className="h-4 w-4 text-accent" />
